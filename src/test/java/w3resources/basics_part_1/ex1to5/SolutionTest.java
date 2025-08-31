@@ -29,4 +29,10 @@ class SolutionTest {
         assertEquals(-4, Solution.divisionOfTwoNumbers(20,-5));
         assertEquals(0, Solution.divisionOfTwoNumbers(0,5));
     }
+
+    @Test
+    public void ex4(){
+        var expected = new int[] {43,1,19,13};
+        assertArrayEquals(expected, Solution.arithmeticOperations());
+    }
 }
