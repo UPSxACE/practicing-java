@@ -33,4 +33,11 @@ public class Solution {
         return new int[] {op1,op2,op3,op4};
     }
 
+    /**
+     * Returns the product of a and b.
+     */
+    public static int productOfTwoNumbers(int a, int b){
+        return a * b;
+    }
+
 }

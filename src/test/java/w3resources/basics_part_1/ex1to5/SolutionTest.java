@@ -1,6 +1,8 @@
 package w3resources.basics_part_1.ex1to5;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -34,5 +36,15 @@ class SolutionTest {
     public void ex4(){
         var expected = new int[] {43,1,19,13};
         assertArrayEquals(expected, Solution.arithmeticOperations());
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "25, 5, 125",
+            "0, 1, 0",
+            "5, -2, -10"
+    })
+    public void ex5(int a, int b, int expected){
+        assertEquals(expected, Solution.productOfTwoNumbers(a,b));
     }
 }
