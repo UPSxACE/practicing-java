@@ -14,4 +14,11 @@ public class Solution {
     public static int sumOfTwoNumbers(int a, int b){
         return a + b;
     }
+
+    /**
+     * Return the division of a and b.
+     */
+    public static int divisionOfTwoNumbers(int a, int b){
+        return a / b;
+    }
 }
