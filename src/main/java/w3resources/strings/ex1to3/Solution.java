@@ -14,4 +14,11 @@ public class Solution {
     public static int getCharacterUnicodeCodePointAtIndex(String text, int position){
         return text.codePointAt(position);
     }
+
+    /**
+     * Gets the Unicode code point from the given text, just before the given index.
+     */
+    public static int getCharacterUnicodeCodePointBeforeIndex(String text, int position){
+        return text.codePointBefore(position);
+    }
 }
