@@ -20,4 +20,9 @@ class SolutionTest {
     public void ex1(int num, boolean expected) {
         assertEquals(expected, Solution.checkUglyNumber(num));
     }
+
+    @Test
+    public void ex2(){
+        assertArrayEquals(new int[]{2488, 7508, 4}, Solution.categorizeNumbers(10000));
+    }
 }
