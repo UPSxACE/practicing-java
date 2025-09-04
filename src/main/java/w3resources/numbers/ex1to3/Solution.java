@@ -1,9 +1,6 @@
 package w3resources.numbers.ex1to3;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Solution {
     private static boolean isPrime(int num) {
@@ -79,5 +76,12 @@ public class Solution {
         return new int[]{abundantNums, deficientNums, perfectNums};
     }
 
-
+    /**
+     * Generates a random integer between given start (inclusive) and given stop (exclusive).
+     */
+    public static int generateRandomIntegerInRange(int start, int stop){
+        var rand = new Random();
+        var rangeSize = stop - start;
+        return rand.nextInt(rangeSize) + start;
+    }
 }

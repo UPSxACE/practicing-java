@@ -25,4 +25,21 @@ class SolutionTest {
     public void ex2(){
         assertArrayEquals(new int[]{2488, 7508, 4}, Solution.categorizeNumbers(10000));
     }
+
+    @ParameterizedTest
+    @CsvSource({
+            "1, 10",
+            "100, 1000",
+            "-10, 10",
+            "-10, 0",
+            "-100, -10",
+            "-500, 500"
+    })
+    public void ex3(int start, int stop){
+        // test 10000 times
+        for(int i = 0; i < 10000; i++){
+            var result = Solution.generateRandomIntegerInRange(start, stop);
+            assertTrue(result >= start && result < stop);
+        }
+    }
 }
