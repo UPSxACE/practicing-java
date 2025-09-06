@@ -1,6 +1,7 @@
 package w3resources.arrays.ex1to4;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.Arrays;
 
@@ -30,6 +31,25 @@ class SolutionTest {
             var copy = strCase[0].clone();
             Solution.sortArray(copy);
             assertArrayEquals(strCase[1], copy);
+        }
+    }
+
+    @Test
+    void ex2(){
+        record Case(
+            int[] array,
+            int expected
+        ){}
+
+        Case[] cases = new Case[]{
+                new Case(new int[]{4, 19, 2, 0}, 25),
+                new Case(new int[]{0, -4, 19, -2}, 13),
+                new Case(new int[]{55}, 55),
+                new Case(new int[]{}, 0),
+        };
+
+        for(var testCase : cases){
+            assertEquals(testCase.expected(), Solution.sumAllValuesInArray(testCase.array()));
         }
     }
 }

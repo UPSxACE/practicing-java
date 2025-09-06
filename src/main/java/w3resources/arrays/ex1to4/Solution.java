@@ -16,4 +16,11 @@ public class Solution {
     public static void sortArray(String[] array){
         Arrays.sort(array);
     }
+
+    /**
+     * Sums all values from the given array.
+     */
+    public static int sumAllValuesInArray(int[] array){
+        return Arrays.stream(array).sum();
+    }
 }
