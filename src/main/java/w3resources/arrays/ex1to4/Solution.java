@@ -23,4 +23,17 @@ public class Solution {
     public static int sumAllValuesInArray(int[] array){
         return Arrays.stream(array).sum();
     }
+
+    /**
+     * Returns a string with a 10x10 grid.
+     */
+    public static String print10x10GridOfDashes(){
+        var temp = new StringBuilder();
+        for(var i = 0; i < 10; i++){
+            if(i != 0) temp.append("\n");
+            temp.append("-");
+            temp.append(" -".repeat(9));
+        }
+        return temp.toString();
+    }
 }

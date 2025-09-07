@@ -52,4 +52,21 @@ class SolutionTest {
             assertEquals(testCase.expected(), Solution.sumAllValuesInArray(testCase.array()));
         }
     }
+
+    @Test
+    void ex3(){
+        assertEquals(
+                """
+                        - - - - - - - - - -
+                        - - - - - - - - - -
+                        - - - - - - - - - -
+                        - - - - - - - - - -
+                        - - - - - - - - - -
+                        - - - - - - - - - -
+                        - - - - - - - - - -
+                        - - - - - - - - - -
+                        - - - - - - - - - -
+                        - - - - - - - - - -""", Solution.print10x10GridOfDashes()
+        );
+    }
 }
