@@ -36,4 +36,11 @@ public class Solution {
         }
         return temp.toString();
     }
+
+    /**
+     * Calculates the average of the elements inside the given array of numbers.
+     */
+    public static double calculateAverageArrayElements(int[] numbers){
+        return Arrays.stream(numbers).average().orElse(0);
+    }
 }
