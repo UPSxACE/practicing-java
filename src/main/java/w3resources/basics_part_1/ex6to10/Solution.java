@@ -19,4 +19,15 @@ public class Solution {
                 x % y
         };
     }
+
+    /**
+     * Returns an array with the multiplication table of the given number.
+     */
+    public static int[] multiplicationTable(int x){
+        int[] products = new int[10];
+        for(var i = 1; i <= 10; i++){
+            products[i-1] = x * i;
+        }
+        return products;
+    }
 }
