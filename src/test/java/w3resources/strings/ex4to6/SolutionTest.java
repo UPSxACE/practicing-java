@@ -17,4 +17,19 @@ class SolutionTest {
     public void ex4(int expected, String str, int start, int end){
         assertEquals(expected, Solution.countUnicodePointsInRange(str, start, end));
     }
+<<<<<<< Updated upstream
+=======
+
+    @ParameterizedTest
+    @CsvSource({
+            "0, 'apple', 'apple'",
+            "-1, 'apple', 'banana'",
+            "1, 'dog', 'cat'",
+            "-1, 'Zoo', 'apple'",
+            "1, 'carpet', 'car'"
+    })
+    public void ex5(int expected, String str1, String str2){
+        assertEquals(expected, Solution.lexicographicalStringComparison(str1, str2));
+    }
+>>>>>>> Stashed changes
 }
