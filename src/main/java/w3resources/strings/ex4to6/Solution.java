@@ -7,8 +7,6 @@ public class Solution {
     public static int countUnicodePointsInRange(String text, int start, int end){
         return text.codePointCount(start, end);
     }
-<<<<<<< Updated upstream
-=======
 
     /**
      * Compares two strings lexicographically. Returns 1 if the first string is lexicographically greater,
@@ -26,5 +24,16 @@ public class Solution {
 
         return 0;
     }
->>>>>>> Stashed changes
+
+    /**
+     * Compares two strings lexicographically, but ignores casing.
+     * Returns 1 if the first string is lexicographically greater, 0 if equal, and -1 if lesser.
+     */
+    public static int caseInsensitiveStringComparison(String str1, String str2){
+        if(str1.equalsIgnoreCase(str2))
+            return 0;
+        return str1.compareToIgnoreCase(str2) > 0
+                ? 1
+                : -1;
+    }
 }
